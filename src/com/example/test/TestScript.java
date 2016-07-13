@@ -54,11 +54,11 @@ public class TestScript {
 		/*
 		 * POST operation for insertion providing the path, xml content and content type.
 		 */
-		executor.post("/posts", "{ \"title\": \"new test\", \"author\": \"REST Tester\" }", "application/json")
+		executor.post("/posts", "{ \"title\": \"I love REST testing\", \"author\": \"REST Tester\" }", "application/json")
 				.expectCode(201)
 				.expectMessage("Created")
 				.expectHeader("Content-Type", "application/json; charset=utf-8")
-				.expectInBody("\"title\": \"new test\"")
+				.expectInBody("\"title\": \"I love REST testing\"")
 				.expectInBody("\"author\": \"REST Tester\"");
 	}
 
